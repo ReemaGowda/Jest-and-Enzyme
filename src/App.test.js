@@ -22,6 +22,13 @@ describe(" counter testing", () => {
   // expect(linkElement).toBeInTheDocument();
 
 
+  //second test
+
+  test("render a button with text of increment", () => {
+    const wrapper = shallow(<App />)
+    expect(wrapper.find('#increment-btn').text()).toContain("Increment")
+    console.log(wrapper.debug())
+  })
 
 
 })
