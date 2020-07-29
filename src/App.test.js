@@ -37,8 +37,11 @@ describe(" counter testing", () => {
     console.log(wrapper.debug())
   })
 
-  
+  test("render the inital of state in a div", () => {
+    expect(wrapper.find('#counter-value').text()).toBe("0")
+  })
 
+   
 
 })
 
