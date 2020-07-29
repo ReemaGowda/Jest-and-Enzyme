@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { shallow } from 'enzyme';
 
 function App() {
   return (
@@ -30,3 +31,11 @@ export default App;
 //install enzyme
 
 //npm i --save-dev enzyme enzyme-adapter-react-16
+
+
+// import { configure, shallow } from 'enzyme';
+// import Adapter from 'enzyme-adapter-react-16';
+
+// configure({ adapter: new Adapter() });
+
+// 1. configure and shallow

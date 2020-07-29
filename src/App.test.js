@@ -12,8 +12,15 @@ configure({ adapter: new Adapter() });
 //counter function to test 
 
 describe(" counter testing", () => {
+
+  let wrapper;
+  beforeEach(() => {
+     wrapper = shallow(<App />)
+  })
+
+
   test('render title of render', () => {
-    const wrapper = shallow(<App />)
+    //enzyme , shallow render the outer part not the inner children in component
     expect(wrapper.find("h1").text()).toContain("This is counter app")
     console.log(wrapper.debug());
   });
@@ -25,10 +32,12 @@ describe(" counter testing", () => {
   //second test
 
   test("render a button with text of increment", () => {
-    const wrapper = shallow(<App />)
+    //function
     expect(wrapper.find('#increment-btn').text()).toBe("Increment")
     console.log(wrapper.debug())
   })
+
+  
 
 
 })
