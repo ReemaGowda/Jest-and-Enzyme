@@ -26,7 +26,7 @@ describe(" counter testing", () => {
 
   test("render a button with text of increment", () => {
     const wrapper = shallow(<App />)
-    expect(wrapper.find('#increment-btn').text()).toContain("Increment")
+    expect(wrapper.find('#increment-btn').text()).toBe("Increment")
     console.log(wrapper.debug())
   })
 
